@@ -7,33 +7,37 @@ Aide de
 * http://bioinformatics.org.au/ws14/wp-content/uploads/ws14/sites/5/2014/07/Ann-Marie-Patch_presentation.pdf
 
 ---------------------------------------------------------------------
-1. Téléchargement des données
+
+#### 1. Les données
+Téléchargement 
 ```
 wget adresse des liens des 4 fastq.gz
 ```
 
-2. Téléchargement de la référence human genome CRCh38/hg18 - version nucléotidique
+#### 2. La référence human genome CRCh38/hg18 - version nucléotidique
+Téléchargement
 ```
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_genomic.fna.gz
 gunzip #pour décompresser
 ```
 
-3. Téléchargement de l'annotation de hg18
+#### 3. Téléchargement de l'annotation de hg18
 
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_genomic.gff.gz
 gunzip pour décompresser
  
-4. téléchargement du script d’installation de Miniconda (suivre instructions de https://bioinfo-fr.net/conda-le-meilleur-ami-du-bioinformaticien): 
+#### 4. Miniconda 
+téléchargement du script d’installation de Miniconda (suivre instructions de https://bioinfo-fr.net/conda-le-meilleur-ami-du-bioinformaticien): 
 ```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh #puis suivre les indications pour terminer l'installation
 ```
 
-5. Installation bowtie2 2.3.4.3 avec 
+#### 5. Installation bowtie2 2.3.4.3 
 ```
 conda search bowtie2
 conda install bowtie2
 ```
 rq : utilisation des lignes de commandes à partir du répertoire /miniconda3/bin/
 
-6. 
+#### 6. 
