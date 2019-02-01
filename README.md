@@ -8,13 +8,18 @@ Aide de
 
 ---------------------------------------------------------------------
 1- Téléchargement des données
+```
 wget adresse des liens des 4 fastq.gz
+```
 
 2- Téléchargement de la référence human genome CRCh38/hg18 - version nucléotidique
+```
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_genomic.fna.gz
-gunzip pour décompresser
+gunzip #pour décompresser
+```
 
 3- Téléchargement de l'annotation de hg18
+
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_genomic.gff.gz
 gunzip pour décompresser
  
