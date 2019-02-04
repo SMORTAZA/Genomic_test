@@ -53,4 +53,4 @@ cmd bowtie2-build
 ```
 cmd bowtie
 ```
-
+#### 9. Visualisation de l'alignement avec IGV
