@@ -20,6 +20,7 @@ Téléchargement
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_genomic.fna.gz
 gunzip #pour décompresser
 ```
+hgdownload.cse.ucsc.edu/goldenPath/hg18/bigZips/chromFa.zip
 
 #### 3. Téléchargement de l'annotation de hg18
 
