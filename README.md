@@ -54,3 +54,7 @@ cmd bowtie2-build
 cmd bowtie
 ```
 #### 9. Visualisation de l'alignement avec IGV
+
+#### 10. outil pour retrouver les large structural aberrations
+
+- https://sourceforge.net/p/adamajava/wiki/qsv/
