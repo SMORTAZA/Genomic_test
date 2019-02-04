@@ -40,4 +40,17 @@ conda install bowtie2
 ```
 rq : utilisation des lignes de commandes à partir du répertoire /miniconda3/bin/
 
-#### 6. 
+#### 6.  Rangement
+Création de diff rép pour pouvoir y ranger les fichiers
+
+#### 7. Indexation de la réf hg18
+
+```
+cmd bowtie2-build
+```
+
+#### 8. Alignement des séquences sur la ref
+```
+cmd bowtie
+```
+
