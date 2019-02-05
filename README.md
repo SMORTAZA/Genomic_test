@@ -69,7 +69,7 @@ The first step of an analysis is to verify the quality of the sequenced data. Fa
 ```
 ~/FastQC/fastqc Genomic/data/samples*fastq.gz
 ```
-This command line lend to the creation of html files for each fastq.gz. This show that the data have a good quality, and so, we can go further for the analysis.
+This command line lend to the creation of html files for each fastq.gz. This show that the data have a good quality - you can have a look on the screenshots of "Per base sequence quality" - , and so, we can go further for the analysis. 
 
 --------------------------------------------------------------------------------
 
