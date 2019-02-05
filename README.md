@@ -39,6 +39,7 @@ wget http://data.broadinstitute.org/igv/projects/downloads/2.4/IGV_2.4.17.zip
 wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.8.zip
 #Decompression and extraction
 unzip fastqc_v0.11.8.zip
+#Make the script executable
 chmod +x FastQC/fastqc
 ```
 
@@ -64,10 +65,11 @@ mv *fastq.gz Genomic/data/samples
 mv hg18.fasta Genomic/data/ref
 ```
 ## Data quality
+The first step of an analysis is to verify the quality of the sequenced data. FastQC is famous for that, mostly for Illumina sequencing. As these fastq.gz are from Illumina paired-end sequencing, FastQC is therefore suitable :
 ```
 ~/FastQC/fastqc Genomic/data/samples*fastq.gz
 ```
-Creation of html files for each fastq.gz. This show that the data have a good quality, and so, we can go further for the analysis.
+This command line lend to the creation of html files for each fastq.gz. This show that the data have a good quality, and so, we can go further for the analysis.
 
 --------------------------------------------------------------------------------
 
