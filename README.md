@@ -73,13 +73,17 @@ The first step of an analysis is to verify the quality of the sequenced data. Fa
 ```
 This command line lend to the creation of html files for each fastq.gz. This show that the data have a good quality - you can have a look on the screenshots of "Per base sequence quality" below - , and so, we can go further for the analysis. 
 
-![](/Genomic_test/Screenshot_ jupyter_R1 fastq gz FastQC Report.png )
+**JUPYTER R1**
+![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/Screenshot_%20jupyter_R1%20fastq%20gz%20FastQC%20Report.png?token=Abv5cutPoGMYtH-9GwOgKrnev3-6OaV9ks5cWYyZwA%3D%3D)
 
-![]()
+**JUPYTER R2**
+![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/Screenshot_jupyter_R2%20fastq%20gz%20FastQC%20Report.png?token=Abv5cpwh99_txt1NCe9H4hp0__SnSNqiks5cWYy0wA%3D%3D)
 
-![]()
+**URANUS R1**
+![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/Screenshot_uranus_R1%20fastq%20gz%20FastQC%20Report.png?token=Abv5ckr4s5dKwQVFF5OxLnDX-MxURTp3ks5cWYzIwA%3D%3D)
 
-![]()
+**URANUS R2**
+![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/Screenshot_uranus_R1%20fastq%20gz%20FastQC%20Report.png?token=Abv5ckr4s5dKwQVFF5OxLnDX-MxURTp3ks5cWYzIwA%3D%3D)
 
 ## Mapping of the sequencing reads
 
