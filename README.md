@@ -12,11 +12,12 @@
     + [Sub-sub-heading](#sub-sub-heading-2)
 
 
-# Heading levels
+# 1. Les données
 
-> This is a fixture to test heading levels
-
-<!-- toc -->
+Téléchargement 
+```
+wget adresse des liens des 4 fastq.gz
+```
 
 ## Heading
 
