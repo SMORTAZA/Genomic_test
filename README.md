@@ -3,6 +3,8 @@
 This report present the beginning of a genomic analysis of patient data. 
 This Github link (https://github.com/ARTbio/genomic-analysis-test/blob/master/README.md) give access to the instructions for this genomic analysis. 
 
+*Note : If you can't see the pictures, there are available directly on the Genomic_test repertory.*
+
 ## Dependancies
 
 * The work has done on ubuntu 14.04 LTS - 64 bits, from my /home/ repertory.
@@ -206,6 +208,7 @@ It is at this step that the large structural aberrations are identified: the cho
 #### Comment on the implication of the findings
 Here, we need the results of the previous step, but also, what is very important, we need to know the bibliography on what already exists on the treatment of ALL-B.
 
-
-
-
+#### Extension of the specific protocol
+Of course, the protocol must be automated, with Snakemake for example. You give as input the fastq.gz files and as output, you take a list of SV and the corresponding targeted treatment for example.
+It will depend on different criteria : focus on only specific regions, exploration of possible other regions to find other SV... 
+But you really have to know the subject in more detail in order to answer these questions.
