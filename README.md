@@ -33,10 +33,18 @@ wget http://data.broadinstitute.org/igv/projects/downloads/2.4/IGV_2.4.17.zip
 #Launch IGV
 ~/jre1.8.0_201/bin/java -Xmx750m -jar ~/IGV_2.4.17/libigv.jar
 ```
+* Install FastQC
+```
+#Download
+wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.8.zip
+#Decompression and extraction
+unzip fastqc_v0.11.8.zip
+chmod +x FastQC/fastqc
+```
 
 ## Input datasets
 
-### Patient data
+### 1. Patient data
 Download patient data from the Github link :
 ```
 wget https://storage.googleapis.com/artbio_genomic_analysis/jupyter_R1.fastq.gz
@@ -45,16 +53,21 @@ wget https://storage.googleapis.com/artbio_genomic_analysis/jupyter_R1.fastq.gz
 wget https://storage.googleapis.com/artbio_genomic_analysis/jupyter_R1.fastq.gz
 ```
 
-### Reference data
+### 2. Reference data
 The reference human genome CRCh38/hg18 is in IGV. So, you can have this from IGV : Genomes > Load Genome From Server > Select Human hg18 and Download Sequence > OK. The reference will be download in fasta format in your ~/Downloads/ repertory. 
 
-### 
+### 3. 
 In order to classify the files, create repertories and move the different files in the corresponding repertory : 
 ```
 mkdir Genomic Genomic/data Genomic/data/samples Genomic/data/ref
 mv *fastq.gz Genomic/data/samples
 mv hg18.fasta Genomic/data/ref
 ```
+## Data quality
+```
+~/FastQC/fastqc Genomic/data/samples*fastq.gz
+```
+Creation of html files for each fastq.gz. This show that the data have a good quality, and so, we can go further for the analysis.
 
 --------------------------------------------------------------------------------
 
