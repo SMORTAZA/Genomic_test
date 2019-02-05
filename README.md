@@ -1,8 +1,8 @@
 # Genomic analysis test
 
 ## Table of contents
-1. [Exemple]
-2. [Exemple 2]
+1. [Exemple] (#heading)
+2. [Exemple 2] (#heading-1)
 
 ### Exemple
 
