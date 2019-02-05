@@ -160,10 +160,14 @@ With this tool, you can see the coverage along the genome, or the different chro
 
 ### 3. Identification of large structural aberrations
 There are different methods that exist to find large structural aberrations, also known as SV for structural variant. 
-Lack of time, I only look for software or tool which detects and identifies large SV. 
+Lack of time, I only look for software or tool which detects and identifies large SV :
+
 * qSV
+
 * CREST
+
 * GATK
+
 * Belly
 
 
