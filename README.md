@@ -151,8 +151,7 @@ In this part, IGV tool is used. To do this, bam files (binary files correspondin
 ~/miniconda3/bin/samtools index results/alignments/uranus.bam
 ```
 When you have launched IGV tool, go to File > Load from File... > and open bam files. 
-f
-![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/chr22_IGV.png?token=Abv5cg35NaceFK0T4bps4-SkC5fG7TFLks5cWYvzwA%3D%3D)
+![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/chr22_IGV.png?token=Abv5chvSayQvYFd4F87GpzT7PjM9HFFYks5cWY2DwA%3D%3D)
 
 ### 3. Large structural aberrations
 
