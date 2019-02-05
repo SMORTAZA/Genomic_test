@@ -4,7 +4,7 @@ This report present the beginning of a genomic analysis of patient data.
 This Github link (https://github.com/ARTbio/genomic-analysis-test/blob/master/README.md) give access to the instructions for this genomic analysis. 
 
 ## Dependancies
-===============
+----------------
 
 * The work has done on ubuntu 14.04 LTS - 64 bits, from my /home/ repertory.
 * It is necessary to install Miniconda. You can do this by following these few command lines on the terminal (from https://bioinfo-fr.net/conda-le-meilleur-ami-du-bioinformaticien). 
@@ -35,7 +35,29 @@ wget http://data.broadinstitute.org/igv/projects/downloads/2.4/IGV_2.4.17.zip
 ~/jre1.8.0_201/bin/java -Xmx750m -jar ~/IGV_2.4.17/libigv.jar
 ```
 
-##
+## Input datasets
+------------------
+
+### Patient data
+Download patient data from the Github link :
+```
+wget https://storage.googleapis.com/artbio_genomic_analysis/jupyter_R1.fastq.gz
+wget https://storage.googleapis.com/artbio_genomic_analysis/jupyter_R1.fastq.gz
+wget https://storage.googleapis.com/artbio_genomic_analysis/jupyter_R1.fastq.gz
+wget https://storage.googleapis.com/artbio_genomic_analysis/jupyter_R1.fastq.gz
+```
+
+### Reference data
+The reference human genome CRCh38/hg18 is in IGV. So, you can have this from IGV : Genomes > Load Genome From Server > Select Human hg18 and Download Sequence > OK. The reference will be download in fasta format in your ~/Downloads/ repertory. 
+
+### 
+In order to classify the files, create repertories and move the different files in the corresponding repertory : 
+```
+mkdir Genomic Genomic/data Genomic/data/samples Genomic/data/ref
+mv *fastq.gz Genomic/data/samples
+mv hg18.fasta Genomic/data/ref
+```
+
 --------------------------------------------------------------------------------
 
 Aide de 
