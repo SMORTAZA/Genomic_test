@@ -85,7 +85,9 @@ This command line lend to the creation of html files for each fastq.gz. This sho
 **URANUS R2**
 ![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/Screenshot_uranus_R1%20fastq%20gz%20FastQC%20Report.png?token=Abv5ckr4s5dKwQVFF5OxLnDX-MxURTp3ks5cWYzIwA%3D%3D)
 
-## Mapping of the sequencing reads
+Out of curiosity, I directly started with the analysis and also because the data was globally correct. Indeed, what should be done is to start by processing the data by removing the low quality sequences ...
+
+## Paired End alignment to the reference genome 
 
 ### 1. Indexation of the reference
 The reference is the human genome hg18 in a fasta format file. In order to use it in an alignement, it should be indexed (creation of six files). 
@@ -153,7 +155,16 @@ In this part, IGV tool is used. To do this, bam files (binary files correspondin
 When you have launched IGV tool, go to File > Load from File... > and open bam files. 
 ![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/chr22_IGV.png?token=Abv5chvSayQvYFd4F87GpzT7PjM9HFFYks5cWY2DwA%3D%3D)
 
-### 3. Large structural aberrations
+With this tool, you can see the coverage along the genome, or the different chromosomes. There are reads corres
+
+### 3. Identification of large structural aberrations
+There are different methods that exist to find large structural aberrations, also known as SV for structural variant. 
+Lack of time, I only look for software or tool which detects and identifies large SV. 
+* qSV
+* CREST
+* GATK
+* Belly
+
 
 
 --------------------------------------------------------------------------------
