@@ -165,23 +165,29 @@ There are different methods that exist to find large structural aberrations, als
 Lack of time, I only look for software or tool which detects and identifies large SV :
 
 * **bcftools**
+
  - https://wurmlab.github.io/genomicscourse/2016-SIB/practicals/population_genetics/map_call
  - note : generalist tool. see the options to use as it is also used for other types of genomic variation. 
 
 * **qSV**
+
   - https://sourceforge.net/p/adamajava/wiki/qsv/
   - note : Detects structural variants in whole genome paired end or mate pair sequencing.
 
 * **CREST**
+
   - https://github.com/youngmook/CREST
+  - note : this tool might produce results close to what is requested in this project.
   - *We developed CREST (Clipping REveals STructure), an algorithm that uses next-generation sequencing reads with partial alignments to a reference genome to directly map structural variations at the nucleotide level of resolution. Application of CREST to whole-genome sequencing data from five pediatric T-lineage acute lymphoblastic leukemias (T-ALLs) and a human melanoma cell line, COLO-829, identified 160 somatic structural variations. Experimental validation exceeded 80% demonstrating that CREST had a high predictive accuracy.* (abstract from the article https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/)
-    - note : this tool might produce results close to what is requested in this project.
+    
 
 * **GATK**
+
   - https://software.broadinstitute.org/gatk/documentation/tooldocs/current/
   - note : used a lot. famous tool ?
 
 * **Belly**
+
   - https://bpa-csiro-workshops.github.io/btp-manuals-md/modules/cancer-module-sv/sv_tut/
   - note : samplevscontrol. use two types of samples : sample (patient data) and control (?). 
   
