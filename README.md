@@ -71,7 +71,15 @@ The first step of an analysis is to verify the quality of the sequenced data. Fa
 ```
 ~/FastQC/fastqc Genomic/data/samples*fastq.gz
 ```
-This command line lend to the creation of html files for each fastq.gz. This show that the data have a good quality - you can have a look on the screenshots of "Per base sequence quality" - , and so, we can go further for the analysis. 
+This command line lend to the creation of html files for each fastq.gz. This show that the data have a good quality - you can have a look on the screenshots of "Per base sequence quality" below - , and so, we can go further for the analysis. 
+
+![](/Genomic_test/Screenshot_ jupyter_R1 fastq gz FastQC Report.png )
+
+![]()
+
+![]()
+
+![]()
 
 ## Mapping of the sequencing reads
 
@@ -139,7 +147,8 @@ In this part, IGV tool is used. To do this, bam files (binary files correspondin
 ~/miniconda3/bin/samtools index results/alignments/uranus.bam
 ```
 When you have launched IGV tool, go to File > Load from File... > and open bam files. 
-![example](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/chr22_IGV.png?token=Abv5cg35NaceFK0T4bps4-SkC5fG7TFLks5cWYvzwA%3D%3D)
+
+![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/chr22_IGV.png?token=Abv5cg35NaceFK0T4bps4-SkC5fG7TFLks5cWYvzwA%3D%3D)
 
 ### 3. Large structural aberrations
 
