@@ -174,8 +174,7 @@ Lack of time, I only look for software or tool which detects and identifies larg
 
 * **CREST**
   - https://github.com/youngmook/CREST
-  - *We developed CREST (Clipping REveals STructure), an algorithm that uses next-generation sequencing reads with partial alignments to a reference genome to directly map structural variations at the nucleotide level of resolution. Application of CREST to whole-genome sequencing data from five pediatric T-lineage acute lymphoblastic leukemias (T-ALLs) and a human melanoma cell line, COLO-829, identified 160 somatic structural variations. Experimental validation exceeded 80% demonstrating that CREST had a high predictive accuracy.* 
-  (abstract from the article https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/)
+  - *We developed CREST (Clipping REveals STructure), an algorithm that uses next-generation sequencing reads with partial alignments to a reference genome to directly map structural variations at the nucleotide level of resolution. Application of CREST to whole-genome sequencing data from five pediatric T-lineage acute lymphoblastic leukemias (T-ALLs) and a human melanoma cell line, COLO-829, identified 160 somatic structural variations. Experimental validation exceeded 80% demonstrating that CREST had a high predictive accuracy.* (abstract from the article https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/)
     - note : this tool might produce results close to what is requested in this project.
 
 * **GATK**
