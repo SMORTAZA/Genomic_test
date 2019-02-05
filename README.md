@@ -83,15 +83,22 @@ cd Genomic/
 ~/miniconda3/bin/bowtie2-build data/ref/hg18.fasta data/ref/hg18_indexed
 ```
 
-### 2. Alignment of the paired reads on the human reference
+### 2. Alignment of the paired reads data on the human reference
+
+#### Mapping of the sequencing reads
 ```
-#for Jupyter patient
+##for Jupyter patient
 ~/miniconda3/bin/bowtie2 -x data/ref/hg18_indexed -1 data/samples/jupyter_R1.fastq.gz -2 data/samples/jupyter_R2.fastq.gz > results/alignments/jupyter.sam
-#for Uranus patient
+#convert sam file on bam file
+~/miniconda3/bin/samtools view -Sb results/alignments/jupyter.sam | ~/miniconda3/bin/samtools sort - > results/alignments/jupyter.bam
+##for Uranus patient
 ~/miniconda3/bin/bowtie2 -x data/ref/hg18_indexed -1 data/samples/uranus_R1.fastq.gz -2 data/samples/uranus_R2.fastq.gz > results/alignments/uranus.sam
+#convert sam file on bam file
+~/miniconda3/bin/samtools view -Sb results/alignments/uranus.sam | ~/miniconda3/bin/samtools sort - > results/alignments/uranus.bam
 ```
 For information :
 ```
+##
 #output obtained when Jupyter data were aligned on the reference genome
 2186659 reads; of these:
   2186659 (100.00%) were paired; of these:
@@ -125,8 +132,16 @@ For information :
         48490 (28.72%) aligned >1 times
 97.09% overall alignment rate
 ```
+#### Covered genomic regions & Corresponding genes
+In this part, IGV tool is used. To do this, bam files (binary files corresponding to the alignment of patient data on the human reference hg18) are indexed :
+```
+~/miniconda3/bin/samtools index results/alignments/jupyter.bam
+~/miniconda3/bin/samtools index results/alignments/uranus.bam
+```
+When you have launched IGV tool, go to File > Load from File... > and open bam files. 
 
-### 3. 
+### 3. Large structural aberrations
+
 
 --------------------------------------------------------------------------------
 
