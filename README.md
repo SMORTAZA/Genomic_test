@@ -156,31 +156,36 @@ In this part, IGV tool is used. To do this, bam files (binary files correspondin
 When you have launched IGV tool, go to File > Load from File... > and open bam files. 
 ![](https://raw.githubusercontent.com/SMORTAZA/Genomic_test/master/chr22_IGV.png?token=Abv5chvSayQvYFd4F87GpzT7PjM9HFFYks5cWY2DwA%3D%3D)
 
-With this tool, you can see the coverage along the genome, or the different chromosomes. There are reads corres
+With this tool, you can see the coverage along the genome, or the different chromosomes. As two regions of chromosomes 9 and 22 were enriched during the DNA preparation, before sequencing, we expect a big coverage on these regions. The gene names of the corresponding covered genomic regions are given by the RefSeq (at the bottom of the IGV window).
 
 ### 3. Identification of large structural aberrations
+The previous steps are present in almost all omic data analysis (Quality checking, Preprocessing, Alignment to a reference). From now what follow is specific to this project.
+
 There are different methods that exist to find large structural aberrations, also known as SV for structural variant. 
 Lack of time, I only look for software or tool which detects and identifies large SV :
 
-* qSV
+* **bcftools**
+ - https://wurmlab.github.io/genomicscourse/2016-SIB/practicals/population_genetics/map_call
+ - note : generalist tool. see the options to use as it is also used for other types of genomic variation. 
 
-* CREST
+* **qSV**
+  - https://sourceforge.net/p/adamajava/wiki/qsv/
+  - note : Detects structural variants in whole genome paired end or mate pair sequencing.
 
-* GATK
+* **CREST**
+  - https://github.com/youngmook/CREST
+  - *We developed CREST (Clipping REveals STructure), an algorithm that uses next-generation sequencing reads with partial alignments to a reference genome to directly map structural variations at the nucleotide level of resolution. Application of CREST to whole-genome sequencing data from five pediatric T-lineage acute lymphoblastic leukemias (T-ALLs) and a human melanoma cell line, COLO-829, identified 160 somatic structural variations. Experimental validation exceeded 80% demonstrating that CREST had a high predictive accuracy.* 
+  (abstract from the article https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3527068/)
+    - note : this tool might produce results close to what is requested in this project.
 
-* Belly
+* **GATK**
+  - https://software.broadinstitute.org/gatk/documentation/tooldocs/current/
+  - note : used a lot. famous tool ?
+
+* **Belly**
+  - https://bpa-csiro-workshops.github.io/btp-manuals-md/modules/cancer-module-sv/sv_tut/
+  - note : samplevscontrol. use two types of samples : sample (patient data) and control (?). 
+  
+Then, we should compare these tools and identify the one that corresponds the best to our expectations.
 
 
-
---------------------------------------------------------------------------------
-
-Aide de 
-* https://wurmlab.github.io/genomicscourse/2016-SIB/practicals/population_genetics/map_call
-* https://espace.library.uq.edu.au/data/UQ_371011/s4112726_phd_submission.pdf?Expires=1549102895&Signature=GKGXS9BgDZag5b9CWFFBMc2umk2-rDSFXGNDSishFB~ev-8WzUJipNHiDxgT8wE4NlRhcTRF2LBkbS1RNRIoIEBdp22chRQGzrj0NrVb9abvsf5g9L~LggtH9n5OjyMrga4mbhTJEKi4Nud60LYvPFol8L-1C5soAR2Xp5EP-SQq5G6sp2CztwKvfvpTEyKwUE68N77GSn3nICx7zKFscnucFiF2MM0dTXBLe2vgtvyDPNZKQxMuJ5Ao7ypjx5P6el9vM0h2hfb1HyDz3dGa8pZrkfH5HQjy0k1Yvl3o0H49DaHZVsL-CQY-WLtCD3tQN2rIBwpoAN6GPqqr63pjjQ__&Key-Pair-Id=APKAJKNBJ4MJBJNC6NLQ
-* https://software.broadinstitute.org/gatk/documentation/tooldocs/current/
-* http://bioinformatics.org.au/ws14/wp-content/uploads/ws14/sites/5/2014/07/Ann-Marie-Patch_presentation.pdf
-
-
-#### 10. outil pour retrouver les large structural aberrations
-
-- https://sourceforge.net/p/adamajava/wiki/qsv/
