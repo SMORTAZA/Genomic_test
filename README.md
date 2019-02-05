@@ -166,8 +166,8 @@ Lack of time, I only look for software or tool which detects and identifies larg
 
 * **bcftools**
 
- - https://wurmlab.github.io/genomicscourse/2016-SIB/practicals/population_genetics/map_call
- - note : generalist tool. see the options to use as it is also used for other types of genomic variation. 
+  - https://wurmlab.github.io/genomicscourse/2016-SIB/practicals/population_genetics/map_call
+  - note : generalist tool. see the options to use as it is also used for other types of genomic variation. 
 
 * **qSV**
 
