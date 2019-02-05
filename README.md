@@ -110,6 +110,7 @@ cd Genomic/
 #convert sam file on bam file
 ~/miniconda3/bin/samtools view -Sb results/alignments/uranus.sam | ~/miniconda3/bin/samtools sort - > results/alignments/uranus.bam
 ```
+
 For information :
 ```
 ##
