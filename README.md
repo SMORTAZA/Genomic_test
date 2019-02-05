@@ -4,9 +4,6 @@
 - [1. Les données](#heading)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
-  * [Sub-heading](#sub-heading-1)
-    + [Sub-sub-heading](#sub-sub-heading-1)
 
 
 ## 1. Les données
@@ -15,10 +12,6 @@ Téléchargement
 ```
 wget adresse des liens des 4 fastq.gz
 ```
-
-## Heading
-
-This is an h1 heading
 
 ### Sub-heading
 
