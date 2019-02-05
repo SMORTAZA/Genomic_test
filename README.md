@@ -1,12 +1,12 @@
 # Genomic analysis test
 
 ## Table of contents
-- [1. Les données](#heading)
+- [Les données](#heading)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
 
 
-## 1. Les données
+## Les données
 
 Téléchargement 
 ```
