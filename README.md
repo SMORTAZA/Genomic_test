@@ -63,6 +63,8 @@ In order to classify the files, create repertories and move the different files 
 mkdir Genomic Genomic/data Genomic/data/samples Genomic/data/ref
 mv *fastq.gz Genomic/data/samples
 mv hg18.fasta Genomic/data/ref
+#Create repertories for further analysis
+mkdir Genomic/results Genomic/results/alignments Genomic/results/variants
 ```
 ## Data quality
 The first step of an analysis is to verify the quality of the sequenced data. FastQC is famous for that, mostly for Illumina sequencing. As these fastq.gz are from Illumina paired-end sequencing, FastQC is therefore suitable :
@@ -70,6 +72,61 @@ The first step of an analysis is to verify the quality of the sequenced data. Fa
 ~/FastQC/fastqc Genomic/data/samples*fastq.gz
 ```
 This command line lend to the creation of html files for each fastq.gz. This show that the data have a good quality - you can have a look on the screenshots of "Per base sequence quality" - , and so, we can go further for the analysis. 
+
+## Mapping of the sequencing reads
+
+### 1. Indexation of the reference
+The reference is the human genome hg18 in a fasta format file. In order to use it in an alignement, it should be indexed (creation of six files). 
+```
+#launch command lines from Genomic/ repertory
+cd Genomic/
+~/miniconda3/bin/bowtie2-build data/ref/hg18.fasta data/ref/hg18_indexed
+```
+
+### 2. Alignment of the paired reads on the human reference
+```
+#for Jupyter patient
+~/miniconda3/bin/bowtie2 -x data/ref/hg18_indexed -1 data/samples/jupyter_R1.fastq.gz -2 data/samples/jupyter_R2.fastq.gz > results/alignments/jupyter.sam
+#for Uranus patient
+~/miniconda3/bin/bowtie2 -x data/ref/hg18_indexed -1 data/samples/uranus_R1.fastq.gz -2 data/samples/uranus_R2.fastq.gz > results/alignments/uranus.sam
+```
+For information :
+```
+#output obtained when Jupyter data were aligned on the reference genome
+2186659 reads; of these:
+  2186659 (100.00%) were paired; of these:
+    537052 (24.56%) aligned concordantly 0 times
+    1497886 (68.50%) aligned concordantly exactly 1 time
+    151721 (6.94%) aligned concordantly >1 times
+    ----
+    537052 pairs aligned concordantly 0 times; of these:
+      152157 (28.33%) aligned discordantly 1 time
+    ----
+    384895 pairs aligned 0 times concordantly or discordantly; of these:
+      769790 mates make up the pairs; of these:
+        383040 (49.76%) aligned 0 times
+        273037 (35.47%) aligned exactly 1 time
+        113713 (14.77%) aligned >1 times
+91.24% overall alignment rate
+#output obtained when Uranus data were aligned on the reference genome 
+1178831 reads; of these:
+  1178831 (100.00%) were paired; of these:
+    184608 (15.66%) aligned concordantly 0 times
+    891434 (75.62%) aligned concordantly exactly 1 time
+    102789 (8.72%) aligned concordantly >1 times
+    ----
+    184608 pairs aligned concordantly 0 times; of these:
+      100177 (54.26%) aligned discordantly 1 time
+    ----
+    84431 pairs aligned 0 times concordantly or discordantly; of these:
+      168862 mates make up the pairs; of these:
+        68674 (40.67%) aligned 0 times
+        51698 (30.62%) aligned exactly 1 time
+        48490 (28.72%) aligned >1 times
+97.09% overall alignment rate
+```
+
+### 3. 
 
 --------------------------------------------------------------------------------
 
