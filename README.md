@@ -1,26 +1,37 @@
 # Genomic analysis test
 
-## Table of contents
-- [Les données](#heading)
-  * [Sub-heading](#sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading)
+This report present the beginning of a genomic analysis of patient data. 
+This Github link (https://github.com/ARTbio/genomic-analysis-test/blob/master/README.md) give access to the instructions for this genomic analysis. 
 
-
-## Les données
-
-Téléchargement 
+## Dependancies
+* The work has done on ubuntu 14.04 LTS - 64 bits, from my /home/ repertory.
+* It is necessary to install Miniconda. You can do this by following these few command lines on the terminal (from https://bioinfo-fr.net/conda-le-meilleur-ami-du-bioinformaticien). 
 ```
-wget adresse des liens des 4 fastq.gz
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+conda config --add channels bioconda
 ```
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
+A repertory called miniconda3 is created. 
+* Now, via Miniconda, you can install the different **tools** we need (**bowtie2** v2.3.4.3, **samtools** v1.9, **bcftools** v1.9, **gatk** v3.8.5, **belly** v0.7.7) by :
+```
+conda install {tool}
+```
+When you want to use an installed tool :
+```
+~/miniconda3/bin
+```
+* Integrative Genomics Viewer - IGV - is very useful to visualize the results. To install this tool :
+```
+#Download Java version 8
+wget https://javadl.oracle.com/webapps/download/AutoDL?BundleId=236878_42970487e3af4f5aa5bca3f542482c60
+#Decompression and extraction
+tar zxvf jre-8u201-linux-x64.tar.gz
+#Download of the IGV tool
+wget http://data.broadinstitute.org/igv/projects/downloads/2.4/IGV_2.4.17.zip
+#Launch IGV
+~/jre1.8.0_201/bin/java -Xmx750m -jar ~/IGV_2.4.17/libigv.jar
+```
 
 --------------------------------------------------------------------------------
 
@@ -30,55 +41,6 @@ Aide de
 * https://software.broadinstitute.org/gatk/documentation/tooldocs/current/
 * http://bioinformatics.org.au/ws14/wp-content/uploads/ws14/sites/5/2014/07/Ann-Marie-Patch_presentation.pdf
 
----------------------------------------------------------------------
-
-#### 1. Les données
-Téléchargement 
-```
-wget adresse des liens des 4 fastq.gz
-```
-
-#### 2. La référence human genome CRCh38/hg18 - version nucléotidique
-Téléchargement
-```
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_genomic.fna.gz
-gunzip #pour décompresser
-```
-hgdownload.cse.ucsc.edu/goldenPath/hg18/bigZips/chromFa.zip
-
-#### 3. Téléchargement de l'annotation de hg18
-
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_genomic.gff.gz
-gunzip pour décompresser
- 
-#### 4. Miniconda 
-téléchargement du script d’installation de Miniconda (suivre instructions de https://bioinfo-fr.net/conda-le-meilleur-ami-du-bioinformaticien): 
-```
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-sh Miniconda3-latest-Linux-x86_64.sh #puis suivre les indications pour terminer l'installation
-```
-
-#### 5. Installation bowtie2 2.3.4.3 
-```
-conda search bowtie2
-conda install bowtie2
-```
-rq : utilisation des lignes de commandes à partir du répertoire /miniconda3/bin/
-
-#### 6.  Rangement
-Création de diff rép pour pouvoir y ranger les fichiers
-
-#### 7. Indexation de la réf hg18
-
-```
-cmd bowtie2-build
-```
-
-#### 8. Alignement des séquences sur la ref
-```
-cmd bowtie
-```
-#### 9. Visualisation de l'alignement avec IGV
 
 #### 10. outil pour retrouver les large structural aberrations
 
