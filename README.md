@@ -19,7 +19,7 @@ conda install {tool}
 ```
 When you want to use an installed tool :
 ```
-~/miniconda3/bin
+~/miniconda3/bin/tool {options}
 ```
 * Integrative Genomics Viewer - IGV - is very useful to visualize the results. To install this tool :
 ```
