@@ -193,4 +193,19 @@ Lack of time, I only look for software or tool which detects and identifies larg
   
 Then, we should compare these tools and identify the one that corresponds the best to our expectations.
 
+### 4. Perspectives
+
+#### Find the covered genomic regions & the corresponding genes
+As I understand it, we are interested in regions located on chromosomes 9 and 22. We should do the bibliography to be able to learn about these regions and target them directly. Like that, we also have the corresponding genes. 
+With the IGV tool, it's good for one or two samples. But when there are more, we should see if a method exists already, or if not, develop one to give us directly these regions and genes with sam / bam alignment files and gff annotation files of the reference genome.
+
+#### Find the large structural aberrations
+As said above, the different methods are to be analyzed in more detail and to compare them in order to take the one that seems correct for our analysis. 
+It is at this step that the large structural aberrations are identified: the chosen tool should be correctly set because accuracy and sensitivity becomes very important here.
+
+#### Comment on the implication of the findings
+Here, we need the results of the previous step, but also, what is very important, we need to know the bibliography on what already exists on the treatment of ALL-B.
+
+
+
 
